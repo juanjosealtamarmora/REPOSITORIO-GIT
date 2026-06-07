@@ -1,0 +1,624 @@
+/* ================================================
+   MOA ACCESORIOS - ESTILOS PREMIUM
+   Bisutería Lujosa y Femenina
+   ================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #d4af37;        /* Dorado Premium */
+    --secondary-color: #2c2c2c;      /* Negro Oscuro */
+    --accent-color: #c084dc;         /* Púrpura Suave */
+    --light-bg: #faf7f2;             /* Blanco Cálido */
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --border-color: #e8dcc8;
+    --shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================================================
+   HEADER Y NAVEGACIÓN
+   ================================================ */
+
+.header {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a1a 100%);
+    color: var(--white);
+    padding: 30px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 0.9em;
+    color: var(--accent-color);
+    margin-top: 5px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    position: relative;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.nav a:hover,
+.nav a:focus {
+    color: var(--primary-color);
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a:focus::after {
+    width: 100%;
+}
+
+/* ================================================
+   BANNER PRINCIPAL
+   ================================================ */
+
+.banner {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="3" fill="white" opacity="0.1"/><circle cx="80" cy="80" r="3" fill="white" opacity="0.1"/></svg>');
+    background-size: 50px 50px;
+    opacity: 0.5;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner p {
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* ================================================
+   SECCIÓN DE TÍTULO
+   ================================================ */
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+/* ================================================
+   GALERÍA DE PRODUCTOS
+   ================================================ */
+
+.gallery {
+    padding: 80px 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid var(--border-color);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-category {
+    color: var(--primary-color);
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.product-description {
+    color: var(--text-light);
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.product-price {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.btn-delete {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-delete:hover {
+    background: #ff3838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+/* ================================================
+   FORMULARIO AGREGAR ARTÍCULO
+   ================================================ */
+
+.add-product-section {
+    background: linear-gradient(135deg, var(--light-bg), #f0e6d2);
+    padding: 80px 0;
+}
+
+.product-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+    border-left: 5px solid var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 1.05em;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: var(--light-bg);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, var(--primary-color), #c99722);
+    color: var(--white);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ================================================
+   SECCIÓN DE CONTACTO
+   ================================================ */
+
+.contact {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 80px 0;
+}
+
+.contact .section-title {
+    color: var(--white);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.contact-item {
+    padding: 30px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-item p {
+    font-size: 1.1em;
+    color: var(--white);
+}
+
+/* ================================================
+   FOOTER
+   ================================================ */
+
+.footer {
+    background: #1a1a1a;
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+    border-top: 3px solid var(--primary-color);
+}
+
+.footer p {
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: scale(1.2) rotate(5deg);
+    color: var(--accent-color);
+}
+
+/* ================================================
+   MENSAJE ÉXITO
+   ================================================ */
+
+.success-message {
+    background: #2ecc71;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: slideIn 0.3s ease;
+    text-align: center;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    .banner h2 {
+        font-size: 2.2em;
+    }
+
+    .banner p {
+        font-size: 1.1em;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 1em;
+    }
+
+    .banner {
+        padding: 60px 20px;
+    }
+
+    .banner h2 {
+        font-size: 1.8em;
+    }
+
+    .banner p {
+        font-size: 1em;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-form {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+}
+
+/* ================================================
+   ANIMACIONES Y EFECTOS EXTRA
+   ================================================ */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.product-card {
+    animation: fadeIn 0.6s ease-in forwards;
+}
+
+.product-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.product-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.product-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
