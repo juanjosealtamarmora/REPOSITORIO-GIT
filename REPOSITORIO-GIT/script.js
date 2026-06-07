@@ -2,8 +2,12 @@
 // MOA ACCESORIOS - JavaScript Funcional
 // ================================================
 
-// Array para almacenar productos (persiste en sessionStorage)
+// Array para almacenar productos (persiste en localStorage)
 let products = [];
+
+// Variables de filtrado
+let currentFilter = 'todas';
+let currentSearch = '';
 
 // Función para cargar productos del almacenamiento
 function loadProducts() {
@@ -60,13 +64,25 @@ function saveProducts() {
 // Función para renderizar productos en la galería
 function renderProducts() {
     const grid = document.getElementById('productsGrid');
+    const countSpan = document.getElementById('productsCount');
     
-    if (products.length === 0) {
-        grid.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 40px; color: #999;">No hay artículos aún. ¡Agrega el tuyo!</p>';
+    // Filtrar productos según la categoría y búsqueda
+    let filteredProducts = products.filter(product => {
+        const matchesCategory = currentFilter === 'todas' || product.category === currentFilter;
+        const matchesSearch = product.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                            product.description.toLowerCase().includes(currentSearch.toLowerCase());
+        return matchesCategory && matchesSearch;
+    });
+    
+    // Actualizar contador
+    countSpan.textContent = filteredProducts.length;
+    
+    if (filteredProducts.length === 0) {
+        grid.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 60px 20px; color: #999; font-size: 1.1em;">No hay artículos que coincidan con tu búsqueda. 🔍</p>';
         return;
     }
 
-    grid.innerHTML = products.map(product => `
+    grid.innerHTML = filteredProducts.map(product => `
         <div class="product-card" data-id="${product.id}">
             <div class="product-image">
                 <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x250?text=${encodeURIComponent(product.name)}'">
@@ -173,6 +189,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('productForm');
     if (form) {
         form.addEventListener('submit', addProduct);
+    }
+
+    // Event listeners para filtros de categoría
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Remover clase active de todos los botones
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Agregar clase active al botón clickeado
+            e.target.closest('.filter-btn').classList.add('active');
+            // Actualizar filtro
+            currentFilter = e.target.closest('.filter-btn').getAttribute('data-filter');
+            renderProducts();
+        });
+    });
+
+    // Event listener para búsqueda
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value;
+            renderProducts();
+        });
     }
 
     // Animación suave al hacer scroll

@@ -37,6 +37,42 @@
     <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title">👑 Nuestras Joyas Exclusivas 👑</h2>
+            
+            <!-- FILTROS Y BÚSQUEDA -->
+            <div class="gallery-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar productos...">
+                </div>
+                
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="todas">
+                        <i class="fas fa-th"></i> Todas
+                    </button>
+                    <button class="filter-btn" data-filter="Collares">
+                        <i class="fas fa-circle"></i> Collares
+                    </button>
+                    <button class="filter-btn" data-filter="Pulseras">
+                        <i class="fas fa-link"></i> Pulseras
+                    </button>
+                    <button class="filter-btn" data-filter="Anillos">
+                        <i class="fas fa-ring"></i> Anillos
+                    </button>
+                    <button class="filter-btn" data-filter="Aretes">
+                        <i class="fas fa-diamond"></i> Aretes
+                    </button>
+                    <button class="filter-btn" data-filter="Sets">
+                        <i class="fas fa-gift"></i> Sets
+                    </button>
+                </div>
+            </div>
+            
+            <!-- CONTADOR DE PRODUCTOS -->
+            <div class="products-info">
+                <p>Mostrando <span id="productsCount">0</span> productos</p>
+            </div>
+            
+            <!-- GALERÍA GRID -->
             <div class="products-grid" id="productsGrid">
                 <!-- Los productos se cargarán aquí dinámicamente -->
             </div>
