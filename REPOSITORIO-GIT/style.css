@@ -28,8 +28,8 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--light-bg);
-    color: var(--text-dark);
+    background-color: var(--dorado);
+    color: var(--text-purpura);
     line-height: 1.6;
 }
 
