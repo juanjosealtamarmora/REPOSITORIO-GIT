@@ -10,16 +10,16 @@
 }
 
 :root {
-    --primary-color: #000000;        /* negro */
-    --secondary-color: #ffffff;      /* Púrpura Oscuro */
-    --accent-color: #9d4edd;         /* Púrpura Medio */
-    --light-bg: #f8f4ff;             /* Blanco Lila Suave */
+    --primary-color: #d4af37;        /* Dorado Premium */
+    --secondary-color: #000000;      /* Negro */
+    --accent-color: #d4af37;         /* Dorado Acento */
+    --light-bg: #ffffff;             /* Blanco */
     --white: #ffffff;
-    --text-dark: #240046;
-    --text-light: #6a4c93;
-    --border-color: #e0aaff;
-    --shadow: 0 15px 40px rgba(255, 230, 0, 0.25);
-    --glow: 0 0 30px rgba(255, 255, 255, 0.4);
+    --text-dark: #000000;
+    --text-light: #333333;
+    --border-color: #d4af37;
+    --shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+    --glow: 0 0 30px rgba(212, 175, 55, 0.5);
 }
 
 html {
@@ -44,7 +44,7 @@ body {
    ================================================ */
 
 .header {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #3c096c 50%, #5a189a 100%);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #111111 100%);
     color: var(--white);
     padding: 30px 0;
     box-shadow: var(--shadow);
@@ -118,13 +118,13 @@ body {
    ================================================ */
 
 .banner {
-    background: linear-gradient(135deg, #5a189a 0%, #9d4edd 25%, #ff006e 75%, #d32f7d 100%);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #d4af37 75%, #2a2a2a 100%);
     color: var(--white);
     padding: 120px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 0 60px rgba(255, 0, 110, 0.2);
+    box-shadow: inset 0 0 60px rgba(212, 175, 55, 0.2);
 }
 
 .banner::before {
@@ -134,8 +134,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(157, 78, 221, 0.2) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 50%);
     opacity: 1;
     animation: float 6s ease-in-out infinite;
 }
@@ -378,7 +378,7 @@ body {
    ================================================ */
 
 .add-product-section {
-    background: linear-gradient(135deg, var(--light-bg), #f0e6d2);
+    background: linear-gradient(135deg, #ffffff, #f5f5f5);
     padding: 80px 0;
 }
 
@@ -468,7 +468,7 @@ body {
    ================================================ */
 
 .contact {
-    background: var(--secondary-color);
+    background: #000000;
     color: var(--white);
     padding: 80px 0;
 }
@@ -513,7 +513,7 @@ body {
    ================================================ */
 
 .footer {
-    background: #1a1a1a;
+    background: #000000;
     color: var(--white);
     padding: 40px 0;
     text-align: center;
