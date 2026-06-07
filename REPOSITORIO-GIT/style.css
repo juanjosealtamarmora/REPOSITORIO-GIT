@@ -18,8 +18,8 @@
     --text-dark: #240046;
     --text-light: #6a4c93;
     --border-color: #e0aaff;
-    --shadow: 0 15px 40px rgba(255, 0, 110, 0.25);
-    --glow: 0 0 30px rgba(255, 0, 110, 0.4);
+    --shadow: 0 15px 40px rgba(255, 230, 0, 0.25);
+    --glow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 html {
