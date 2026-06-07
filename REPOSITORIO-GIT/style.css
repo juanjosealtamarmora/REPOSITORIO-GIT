@@ -28,8 +28,8 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--dorado);
-    color: var(--text-purpura);
+    background-color: var(--light-bg);
+    color: var(--text-dark);
     line-height: 1.6;
 }
 
@@ -220,10 +220,10 @@ body {
 
 @keyframes glow {
     0%, 100% {
-        text-shadow: 0 0 20px rgba(255, 0, 110, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     50% {
-        text-shadow: 0 0 30px rgba(255, 0, 110, 0.8), 0 0 40px rgba(157, 78, 221, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -275,7 +275,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(157, 78, 221, 0.1));
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.1));
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 1;
@@ -283,7 +283,7 @@ body {
 
 .product-card:hover {
     transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 20px 50px rgba(255, 0, 110, 0.3), var(--glow);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3), var(--glow);
     border-color: var(--primary-color);
 }
 
@@ -352,7 +352,7 @@ body {
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 15px;
-    text-shadow: 0 0 10px rgba(255, 0, 110, 0.4);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
 }
 
 .btn-delete {
@@ -451,12 +451,12 @@ body {
     transition: all 0.3s ease;
     letter-spacing: 1px;
     text-transform: uppercase;
-    box-shadow: 0 8px 25px rgba(255, 0, 110, 0.4), var(--glow);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4), var(--glow);
 }
 
 .btn-submit:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(255, 0, 110, 0.6), 0 0 30px rgba(255, 0, 110, 0.5);
+    box-shadow: 0 12px 40px rgba(212, 175, 55, 0.6), 0 0 30px rgba(212, 175, 55, 0.5);
 }
 
 .btn-submit:active {
