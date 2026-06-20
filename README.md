@@ -1,7 +1,7 @@
 # Guía Completa de Comandos de Git
 
 ## Introducción
-Git es un sistema de control de versiones distribuido que te permite rastrear cambios en tu código. Esta guía te proporciona los comandos más importantes con explicaciones detalladas sobre cuándo usarlos y cuándo evitarlos.
+Git es un sistema de control de versiones distribuido que te permite rastrear cambios en tu código. Esta guía te proporciona los comandos más importantes con explicaciones detalladas sobre cuándo usarlos y cuándo evitarlos
 
 ---
 
